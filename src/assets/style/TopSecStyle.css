@@ -1,0 +1,52 @@
+.top-section {
+    padding: 24vh;
+    background-color: #B5D6D6;
+    background-image: url(../img/Rains.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.location-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #34495e;
+}
+
+.date-location {
+    margin-right: 10%;
+}
+
+.date,
+.location,
+.temperature {
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.date {
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.temperature {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 600;
+}
+
+.weather-icon {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+}
+
+.weather-icon img {
+    width: 100%;
+    height: auto;
+}

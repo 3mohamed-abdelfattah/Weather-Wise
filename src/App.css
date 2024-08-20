@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: "Josefin Sans", sans-serif;
+    color: #474747;
+    background-color: #EAF4F4;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+}

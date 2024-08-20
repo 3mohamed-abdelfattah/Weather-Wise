@@ -1,0 +1,71 @@
+.end-section {
+    border-radius: 60px 60px 0px 0px;
+    background-color: #F5F9F9;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.todayTxt {
+    font-size: 22px;
+    font-weight: 700;
+    position: sticky;
+    left: 0;
+    background-color: #F5F9F9;
+    z-index: 1;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.dotTxt {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.arrow-left,
+.arrow-right {
+    background: none;
+    border: none;
+    font-size: 22px;
+    font-weight: 500;
+    color: #34495e;
+    font-family: "Josefin Sans", sans-serif;
+    cursor: pointer;
+    position: relative;
+    bottom: 100px;
+}
+
+.forecast-today {
+    text-align: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.forecast-hours {
+    display: inline-flex;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.hour {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #E5F2F2;
+    border-radius: 44px;
+    border: #B5D6D6 solid 1px;
+    padding: 28px 22px 28px 22px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hour.active {
+    background-color: #FEE68B;
+    border: #FBDC64 solid 1px;
+    position: relative;
+    bottom: 25px;
+    box-shadow: 0 9px 9px hsla(47, 98%, 77%, 0.5);
+}

@@ -1,11 +1,16 @@
-import { Fragment } from 'react'
+import TopSection from './component/TopSection'
+import MiddleSection from './component/MiddleSection'
+import EndSection from './component/EndSection'
+import './App.css'
 
 function App() {
 
   return (
-    <Fragment>
-      MEOW
-    </Fragment>
+    <div className="container">
+      <TopSection />
+      <MiddleSection />
+      <EndSection />
+    </div>
   )
 }
 
