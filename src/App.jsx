@@ -68,7 +68,7 @@ function App() {
     setDayIndex(index);
   };
 
-  if (!weatherData) return <div>Loading...</div>;
+  if (!weatherData) return <div>Allow The Permission</div>;
 
   const date = new Date();
   date.setDate(date.getDate() + dayIndex);
