@@ -1,14 +1,13 @@
-import React from 'react'
 import SunnyIcon from '../assets/img/partly-sunny.png'
-import RainyIcon from '../assets/img/rainy.png'
 import '../assets/style/EndSecStyle.css'
 
-export default function EndSection() {
+export default function EndSection(props) {
+
     return (
         <div className="end-section">
-            <button id="yesterday" className="arrow-left" style={{ paddingLeft: '2%' }}>‹ Yesterday</button>
+            <button id="yesterday" className="arrow-left" onClick={() => props.dayChange(-1)} style={{ paddingLeft: '2%' }}>‹ Yesterday</button>
             <div className="forecast-today">
-                <p className="todayTxt">Today <br /><span className="dotTxt">.</span></p>
+                <p className="todayTxt" onClick={() => props.dayChange(0)}>Today <br /><span className="dotTxt">.</span></p>
                 <div className="forecast-hours">
                     <div className="hour">
                         <p>6 AM</p>
@@ -16,9 +15,9 @@ export default function EndSection() {
                         <p>25°C</p>
                     </div>
                     <div className="hour active">
-                        <p className="current-hour">2 PM</p>
-                        <img src={RainyIcon} />
-                        <p className="current-degree">18°C</p>
+                        <p className="current-hour">{props.currentHour}</p>
+                        <img src={SunnyIcon} />
+                        <p className="current-degree">{props.temperature}</p>
                     </div>
                     <div className="hour">
                         <p>4 PM</p>
@@ -57,7 +56,7 @@ export default function EndSection() {
                     </div>
                 </div>
             </div>
-            <button id="tomorrow" className="arrow-right" style={{ paddingRight: '2%' }}>Tomorrow ›</button>
+            <button id="tomorrow" className="arrow-right" onClick={() => props.dayChange(1)} style={{ paddingRight: '2%' }}>Tomorrow ›</button>
         </div>
     )
 }
