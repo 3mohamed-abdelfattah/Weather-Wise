@@ -68,10 +68,6 @@ function App() {
     setDayIndex(index);
   };
 
-  const highlightButton = (activeIndex) => {
-    return (buttonIndex) => buttonIndex === activeIndex ? { opacity: '1' } : { opacity: '0.5' };
-  };
-
   if (!weatherData) return <div>Loading...</div>;
 
   const date = new Date();
@@ -90,7 +86,7 @@ function App() {
     <div className="container">
       <TopSection date={formattedDate} location={`${weatherData.location.name}, ${weatherData.location.country}`} temperature={`${Math.round(forecastData.day.avgtemp_c)}°C`} />
       <MiddleSection day={dayName} condition={forecastData.day.condition.text} />
-      <EndSection dayChange={handleDayChange} currentHour={`${currentHour} ${period}`} temperature={`${Math.round(forecastData.day.avgtemp_c)}°C`} highlightButton={highlightButton} />
+      <EndSection dayChange={handleDayChange} currentHour={`${currentHour} ${period}`} temperature={`${Math.round(forecastData.day.avgtemp_c)}°C`} />
     </div>
   )
 }
